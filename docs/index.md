@@ -80,3 +80,33 @@ headers hold information about the event as well as signature information, which
 can use to validate the content was published by GitHub for consumption by the
 application. The request body contains a JSON payload, with a schema that depends
 on the event type being published.
+
+```json
+{
+  "event": "ping",
+  "payload": {
+    "zen": "Design for failure.",
+    "hook_id": 206066454,
+    "hook": {
+      "type": "App",
+      "id": 206066454,
+      "name": "web",
+      "active": true,
+      "events": [
+        "pull_request",
+        "pull_request_review",
+        "pull_request_review_comment"
+      ],
+      "config": {
+        "content_type": "json",
+        "insecure_ssl": "0",
+        "secret": "********",
+        "url": "https://smee.io/ge9LDmnSDedFY6f"
+      },
+      "updated_at": "2020-04-29T02:12:24Z",
+      "created_at": "2020-04-29T02:12:24Z",
+      "app_id": 62813
+    }
+  }
+}
+```
